@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>user-search-results</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item *ngIf="user" text-wrap>
+        <ion-avatar item-left>
+            <img [src]="user.avatar_url" alt="img">
+        </ion-avatar>
+        <h2>{{user.name}}</h2>
+        <h3>{{user.company}}</h3>
+        <p>{{user.location}}</p>
+        <p text-wrap>{{ user.bio }}</p>
+    </ion-item>
+
+    <ion-list>
+        <ion-card *ngFor="let repository of repositories">
+            <ion-card-header>
+                <ion-card-title>{{ repository.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{ repository.description }}
+                {{ repository.id }}
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>
