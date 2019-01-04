@@ -1,22 +1,25 @@
 <ion-header>
 
   <ion-toolbar color="primary">
-    <ion-title>User Search</ion-title>
+    <ion-title>GitHub User Search</ion-title>
   </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-searchbar [(ngModel)]="username" (ionChange)="searchUserInformation()" placeholder="Search"></ion-searchbar>
 
-  <ion-item>
-    <ion-label position="stacked" color="primary">Username</ion-label>
-    <ion-input type="text" [(ngModel)]="username"></ion-input>
-  </ion-item>
-
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
-    <ion-fab-button (click)="getUserInformation()">
-      <ion-icon name="search"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    <ion-list>
+        <ion-item-sliding *ngFor="let user of users">
+            <ion-item button (click)="getUserInformation(user)">
+                <ion-avatar item-left>
+                    <img [src]="user.avatar_url" alt="img">
+                </ion-avatar>
+                <ion-label>
+                    <h2>{{user.login}}</h2>
+                </ion-label>
+            </ion-item>
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>

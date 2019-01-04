@@ -1,23 +1,15 @@
 # Ionic4 Github Search API
 
-This is a demo of Ionic 4, Angular, Typescript, Firebase with the Github Search API.
+This is a demo of Ionic 4, Angular, Typescript & Firebase with the Github Search API.
 
-* Ionic for its PWA capabilities and hybrid mobile potential
+* Ionic for its PWA and hybrid mobile capabilities
 * Angular for its rewrite
 * Typescript for its OO
 * Firebase for its hosting and cloud functions
 
 ## Demo
 
-You can see a demo of the app at https://ionic4-github-search-api.firebaseapp.com/
-
-## TODO
-
-* Add some cucumber.js features
-* Add some firebase cloud functions to allow sharing results via email, twitter, etc
-* Handle large result sets with a virtual scroll or paging
-* Update from deprecated HttpModule 
-* Refactor to use components
+You can see a working demo at https://ionic4-github-search-api.firebaseapp.com/
 
 ## Installation
 
@@ -26,3 +18,11 @@ You can see a demo of the app at https://ionic4-github-search-api.firebaseapp.co
 * Clone this repository: `git clone https://github.com/gerrymclarnon/ionic4-github-search-api.git`.
 * Run `npm install` from the project root.
 * Run `ionic serve` in a terminal from the project root.
+
+## TODO
+
+* Add Cucumber.js features
+* Add Firebase cloud functions to allow sharing results via email, twitter, etc
+* Handle large result sets with a virtual scroll or paging
+* Update from deprecated HttpModule 
+* Refactor to use components

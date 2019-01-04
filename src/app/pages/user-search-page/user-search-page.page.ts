@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {User} from '../../models/user.interface';
+import {GithubService} from '../../providers/github.service';
 
 @Component({
     selector: 'app-user-search-page',
@@ -9,14 +11,23 @@ import {Router} from '@angular/router';
 export class UserSearchPagePage implements OnInit {
 
     username: string;
+    users: User[];
 
-    constructor(public router: Router) {
+    constructor(private githubService: GithubService,
+                private router: Router) {
     }
 
     ngOnInit() {
     }
 
-    getUserInformation(): void {
-        this.router.navigateByUrl(`user-search-results/${this.username}`);
+    searchUserInformation(): void {
+        this.users = [];
+
+        this.githubService.searchUserInformation(this.username)
+            .subscribe((data: User[]) => this.users = data);
+    }
+
+    getUserInformation(user: User): void {
+        this.router.navigateByUrl(`user-search-results/${user.login}`);
     }
 }
