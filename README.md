@@ -16,6 +16,8 @@ You can see a demo of the app at https://ionic4-github-search-api.firebaseapp.co
 * Add some cucumber.js features
 * Add some firebase cloud functions to allow sharing results via email, twitter, etc
 * Handle large result sets with a virtual scroll or paging
+* Update from deprecated HttpModule 
+* Refactor to use components
 
 ## Installation
 

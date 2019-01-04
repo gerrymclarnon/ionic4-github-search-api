@@ -5,7 +5,6 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {IonicModule} from '@ionic/angular';
 
-import {ComponentsModule} from '../../components/components.module';
 import {UserSearchResultsPage} from './user-search-results.page';
 
 const routes: Routes = [
@@ -20,8 +19,7 @@ const routes: Routes = [
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild(routes),
-        // ComponentsModule
+        RouterModule.forChild(routes)
     ],
     declarations: [UserSearchResultsPage]
 })
