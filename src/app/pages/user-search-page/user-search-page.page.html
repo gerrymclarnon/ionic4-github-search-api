@@ -1,15 +1,16 @@
 <ion-header>
 
-  <ion-toolbar color="primary">
-    <ion-title>GitHub User Search</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>GitHub User Search</ion-title>
+    </ion-toolbar>
 
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="username" (ionChange)="searchUserInformation()" placeholder="Search"></ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-    <ion-searchbar [(ngModel)]="username" (ionChange)="searchUserInformation()" placeholder="Search"></ion-searchbar>
-
     <ion-list>
         <ion-item-sliding *ngFor="let user of users">
             <ion-item button (click)="getUserInformation(user)">
