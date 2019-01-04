@@ -21,7 +21,7 @@ You can see a demo of the app at https://ionic4-github-search-api.firebaseapp.co
 
 ## Installation
 
-* [Download the installer](https://nodejs.org/) for Node.js 6 or greater.
+* [Download the installer](https://nodejs.org/) for Node.js 8.9.4 or greater.
 * Install the ionic CLI globally: `npm install -g ionic`
 * Clone this repository: `git clone https://github.com/gerrymclarnon/ionic4-github-search-api.git`.
 * Run `npm install` from the project root.

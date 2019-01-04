@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>User Search</ion-title>
   </ion-toolbar>
 
@@ -10,13 +10,13 @@
 <ion-content padding>
 
   <ion-item>
-    <ion-label floating>Username</ion-label>
+    <ion-label position="stacked" color="primary">Username</ion-label>
     <ion-input type="text" [(ngModel)]="username"></ion-input>
   </ion-item>
 
-  <ion-fab bottom right>
-    <button ion-fab (click)="getUserInformation()">
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
+    <ion-fab-button (click)="getUserInformation()">
       <ion-icon name="search"></ion-icon>
-    </button>
+    </ion-fab-button>
   </ion-fab>
 </ion-content>

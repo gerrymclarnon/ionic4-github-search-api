@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/user-search-page"></ion-back-button>
         </ion-buttons>
@@ -12,10 +12,12 @@
         <ion-avatar item-left>
             <img [src]="user.avatar_url" alt="img">
         </ion-avatar>
-        <h2>{{user.name}}</h2>
-        <h3>{{user.company}}</h3>
-        <p>{{user.location}}</p>
-        <p text-wrap>{{ user.bio }}</p>
+        <ion-label>
+            <h2>{{user.name}}</h2>
+            <h3>{{user.company}}</h3>
+            <p>{{user.location}}</p>
+            <p text-wrap>{{ user.bio }}</p>
+        </ion-label>
     </ion-item>
 
     <ion-list>
